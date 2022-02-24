@@ -4,7 +4,6 @@ import requests  # noqa We are just importing this to prove the dependency insta
 
 def main():
     translations_path = os.environ["INPUT_PATH"]
-    token = os.environ["INPUT_TOKEN"]
 
     progress = f"""
         translations_path = {translations_path}
