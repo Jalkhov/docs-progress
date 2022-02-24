@@ -11,7 +11,7 @@ jobs:
         id: docspro
         uses: Jalkhov/docs-pro@master
         with:
-          path: "translations/**/*.po"
+          path: "docs/locale/es/LC_MESSAGES"
 
       - name: Check outputs
         run: |
