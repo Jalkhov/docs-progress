@@ -4,7 +4,8 @@ description: "Get translation pogress from docs"
 inputs:
   path:
     description: "Path to translation folder"
-    required: true
+    required: false
+    default: "trans/sample/**/**.po"
 outputs:
   progress:
     description: "Output from the action"
