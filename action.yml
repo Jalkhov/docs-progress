@@ -2,21 +2,13 @@ name: "Docspro"
 author: "Jalkhov"
 description: "Get translation pogress from docs"
 inputs:
-  translations_path:
+  path:
     description: "Path to translation folder"
     required: true
-  only_languages:
-    description: "Only check these languages, comma separated list"
-    required: false
-    default: ""
   token:
     description: "GitHub Secret Token; if not given the check result is not attached to the commit."
     required: false
     default: ""
-  min_coverage:
-    description: "Minimum percentage (between 0.0 and 100.0) required to mark the check successful."
-    required: false
-    default: "0.0"
 outputs:
   progress:
     description: "Output from the action"
