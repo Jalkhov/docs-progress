@@ -9,6 +9,7 @@ def main():
     translated = docsp.translated()
 
     if docsp.warnings:
+        print(docsp.warnings)
         for wrn in docsp.warnings:
             print("::warning ::Review needed")
 
