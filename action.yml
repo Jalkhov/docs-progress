@@ -4,11 +4,13 @@ description: "Get translation pogress from docs"
 inputs:
   path:
     description: "Path to translation folder"
-    required: false
-    default: "trans/sample/**/**.po"
+    required: true
 outputs:
   progress:
-    description: "Output from the action"
+    description: "Total progress from project"
+branding:
+  icon: "percent"
+  color: "red"
 runs:
   using: "docker"
   image: "Dockerfile"
