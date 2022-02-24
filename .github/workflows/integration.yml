@@ -11,7 +11,7 @@ jobs:
         id: docspro
         uses: Jalkhov/docs-pro@master
         with:
-          translations_path: 'translations/**/*.po'
+          path: 'translations/**/*.po'
 
       - name: Check outputs
         run: |
