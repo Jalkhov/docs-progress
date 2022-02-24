@@ -8,10 +8,14 @@ def main():
     token = os.environ["INPUT_TOKEN"]
     min_coverage = os.environ["INPUT_MIN_COVERAGE"]
 
-    print(f"::set-output name=translations_path::{translations_path}")
-    print(f"::set-output name=only_languages::{only_languages}")
-    print(f"::set-output name=token::{token}")
-    print(f"::set-output name=min_coverage::{min_coverage}")
+    progress = f"""\
+        translations_path = {translations_path}
+        only_languages = {only_languages}
+        token = {token}
+        min_coverage = {min_coverage}
+    """
+
+    print(f"::set-output name=progress::{progress}")
 
 
 if __name__ == "__main__":
