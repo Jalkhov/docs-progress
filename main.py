@@ -8,7 +8,7 @@ def main():
     token = os.environ["INPUT_TOKEN"]
     min_coverage = os.environ["INPUT_MIN_COVERAGE"]
 
-    progress = f"""\
+    progress = f"""
         translations_path = {translations_path}
         only_languages = {only_languages}
         token = {token}

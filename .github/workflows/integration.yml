@@ -8,8 +8,10 @@ jobs:
       - name: Self test
         id: selftest
 
-        # Put your action repo here
-        uses: Jalkhov/docs-pro@master
+      - uses: Jalkhov/docs-pro@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          translations_path: 'translations/**/*.po'
 
       - name: Check outputs
         run: |
