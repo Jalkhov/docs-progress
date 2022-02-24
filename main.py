@@ -8,7 +8,6 @@ def main():
 
     progress = f"""
         translations_path = {translations_path}
-        token = {token}
     """
 
     print(f"::set-output name=progress::{progress}")
