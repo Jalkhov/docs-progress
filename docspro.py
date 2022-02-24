@@ -46,6 +46,7 @@ class DocsPro(object):
     def translated(self, fix=True):
         self.__get_po_files()
         self.__walk_files()
+        print("HEREEE!", self.translatedMessageCount, self.totalMessages)
         total = self.__total()
 
         return "%.2f" % (total) if fix else str(total)
