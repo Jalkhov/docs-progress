@@ -12,7 +12,7 @@ class DocsPro(object):
         self.PoFiles = []
         self.translatedStrings = 0
         self.totalStrings = 0
-        self.warnings = ['multiple_langs']
+        # self.warnings = []
 
 
     def __get_PoFiles(self):
@@ -36,14 +36,6 @@ class DocsPro(object):
         return (translatedStrings, totalStrings)
 
 
-    def __langs_check(self, po):
-        try:
-            lng = po.metadata['Language']
-            if lng not in self.check_langs:
-                self.check_langs.append(lng)
-        except:
-            self.check_langs = False
-
     def __walk_files(self):
         """
         Walk all .po files and store global total
@@ -52,9 +44,6 @@ class DocsPro(object):
         files = self.PoFiles
         for file in files:
             po = polib.pofile(file)
-
-            self.__langs_check(po)
-
             obsoletes = len(po.obsolete_entries())
             msgs_data = self.__msgs_data(po, obsoletes)
             self.translatedStrings += msgs_data[0]
@@ -77,8 +66,6 @@ class DocsPro(object):
         return "%.2f" % (total) if fix else str(total)
 
 
-# path = 'docs/locales'
-# dp = DocsPro(path)
-# d = dp.translated()
-# print(dp.warnings)
-
+path = 'docs/locales'
+dp = DocsPro(path)
+d = dp.translated()

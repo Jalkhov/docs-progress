@@ -12,6 +12,9 @@ jobs:
         uses: Jalkhov/docs-pro@master
         with:
           path: "docs/locales/es/LC_MESSAGES"
+          multilang: true
+          only-languages: "es"
+          ignore-languages: "zh_CN"
 
       - name: Check outputs
         run: |
