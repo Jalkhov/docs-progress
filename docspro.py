@@ -1,57 +1,84 @@
 import glob
 import os
 import polib
+from pprint import pprint
 
-# path = 'docs/locales/es/LC_MESSAGES'
 
 class DocsPro(object):
     """docstring for DocsPro"""
     def __init__(self, path):
         super(DocsPro, self).__init__()
         self.path = path
-        self.po_files = []
-        self.translatedMessageCount = 0
-        self.totalMessages = 0
+        self.PoFiles = []
+        self.translatedStrings = 0
+        self.totalStrings = 0
+        self.warnings = ['multiple_langs']
 
 
-    def __get_po_files(self):
+    def __get_PoFiles(self):
+        """
+        Get all .po files and absolute paths
+        """
         for root, dirs, files in os.walk(self.path):
             for file in files:
                 if file.endswith(".po"):
                     file_path = os.path.join(root, file)
-                    self.po_files.append(file_path)
+                    self.PoFiles.append(file_path)
 
 
     def __msgs_data(self, po, obsoletes):
-        translatedMessageCount = len(po.translated_entries())
-        totalMessages = len(po) - obsoletes # Substrate obsoletes from total entries
+        """
+        Get translated and total strings
+        """
+        translatedStrings = len(po.translated_entries())
+        totalStrings = len(po) - obsoletes # Substrate obsoletes from total entries
 
-        return (translatedMessageCount, totalMessages)
+        return (translatedStrings, totalStrings)
 
+
+    def __langs_check(self, po):
+        try:
+            lng = po.metadata['Language']
+            if lng not in self.check_langs:
+                self.check_langs.append(lng)
+        except:
+            self.check_langs = False
 
     def __walk_files(self):
-        files = self.po_files
+        """
+        Walk all .po files and store global total
+        translated and total strings
+        """
+        files = self.PoFiles
         for file in files:
             po = polib.pofile(file)
+
+            self.__langs_check(po)
+
             obsoletes = len(po.obsolete_entries())
             msgs_data = self.__msgs_data(po, obsoletes)
-            self.translatedMessageCount += msgs_data[0]
-            self.totalMessages += msgs_data[1]
+            self.translatedStrings += msgs_data[0]
+            self.totalStrings += msgs_data[1]
 
 
-    def __total(self) -> float:
-        return (self.translatedMessageCount / self.totalMessages) * 100
+    def __total(self):
+        """
+        Calculate final total progress
+        """
+        return (self.translatedStrings / self.totalStrings) * 100
 
 
     def translated(self, fix=True):
-        self.__get_po_files()
+        self.__get_PoFiles()
         self.__walk_files()
+
         total = self.__total()
 
         return "%.2f" % (total) if fix else str(total)
 
 
+# path = 'docs/locales'
 # dp = DocsPro(path)
 # d = dp.translated()
-# print(d)
+# print(dp.warnings)
 
