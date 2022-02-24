@@ -1,12 +1,25 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Docspro"
+author: "Jalkhov"
+description: "Get translation pogress from docs"
+author: "Pedro Torcatt"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
+  translations_path:
+    description: "Path to translation folder"
+    required: true
+  only-languages:
+    description: "Only check these languages, comma separated list"
+    required: false
+    default: ""
+  token:
+    description: "GitHub Secret Token; if not given the check result is not attached to the commit."
+    required: false
+    default: ""
+  min-coverage:
+    description: "Minimum percentage (between 0.0 and 100.0) required to mark the check successful."
+    required: false
+    default: "0.0"
 outputs:
-  myOutput:
+  progress:
     description: "Output from the action"
 runs:
   using: "docker"
