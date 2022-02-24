@@ -8,6 +8,10 @@ def main():
     docsp = DocsPro(docs_path)
     translated = docsp.translated()
 
+    if docsp.warnings:
+        for wrn in docsp.warnings:
+            print("::warning ::Review needed")
+
     print(f"::set-output name=progress::{translated}")
 
 
