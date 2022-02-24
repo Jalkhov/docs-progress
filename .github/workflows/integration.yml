@@ -8,7 +8,7 @@ jobs:
       - name: Self test
         id: selftest
 
-      - uses: Jalkhov/docs-pro@master
+        uses: Jalkhov/docs-pro@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           translations_path: 'translations/**/*.po'
