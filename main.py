@@ -1,6 +1,7 @@
 import os
 import requests  # noqa We are just importing this to prove the dependency installed correctly
 
+print(os.environ)
 
 def main():
     translations_path = os.environ["INPUT_PATH"]
