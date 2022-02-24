@@ -1,7 +1,6 @@
 name: "Docspro"
 author: "Jalkhov"
 description: "Get translation pogress from docs"
-author: "Pedro Torcatt"
 inputs:
   translations_path:
     description: "Path to translation folder"
