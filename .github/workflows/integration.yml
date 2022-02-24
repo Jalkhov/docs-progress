@@ -15,4 +15,4 @@ jobs:
 
       - name: Check outputs
         run: |
-          test "${{ steps.docspro.outputs.progress }}"
+          echo "${{ steps.docspro.outputs.progress }}"
