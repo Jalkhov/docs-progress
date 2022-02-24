@@ -32,7 +32,6 @@ class DocsPro(object):
     def __walk_files(self):
         files = self.po_files
         for file in files:
-            print(file)
             po = polib.pofile(file)
             obsoletes = len(po.obsolete_entries())
             msgs_data = self.__msgs_data(po, obsoletes)
