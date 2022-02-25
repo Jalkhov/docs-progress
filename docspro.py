@@ -10,11 +10,15 @@ def parser(list):
 
     return out
 
+def vbool(val):
+    return True if val == 'true' else False
+
+
 class DocsPro(object):
     """docstring for DocsPro"""
     def __init__(self, path, multilang=False, ignore_langs=''):
         super(DocsPro, self).__init__()
-        self.multilang = multilang
+        self.multilang = vbool(multilang)
         self.ignore_langs = ignore_langs
         self.path = path
         # self.PoFiles = []
