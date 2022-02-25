@@ -1,0 +1,64 @@
+name: Test Multiple Cases
+on: [push]
+jobs:
+  progress-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+        # This return a string with the progress of pointed lang
+      - name: Single language
+        id: single_lang
+        uses: Jalkhov/docs-pro@master
+        with:
+          path: "docs/locales/es"
+
+        # This return a dict with each lang and it progress
+      - name: Multiple languages
+        id: multi_lang
+        uses: Jalkhov/docs-pro@master
+        with:
+          path: "docs/locales"
+          multilang: true
+
+        # This return a dict with each lang and it progress,
+        # but ignoring zh_CN lang
+      - name: Multiple languages ignoring one
+        id: multi_lang_ignore
+        uses: Jalkhov/docs-pro@master
+        with:
+          path: "docs/locales"
+          multilang: true
+          ignore-languages: zh_CN
+
+        # This calculate entire project progress (all langs)
+      - name: Entire project
+        id: full_project
+        uses: Jalkhov/docs-pro@master
+        with:
+          path: "docs/locales"
+          ignore-languages: zh_CN
+
+        # This calculate entire project progress (all langs)
+        # ignoring one lang
+      - name: Entire project ignoring one
+        id: full_project_ignore
+        uses: Jalkhov/docs-pro@master
+        with:
+          path: "docs/locales"
+          ignore-languages: zh_CN
+
+      - name: Check outputs
+        run: |
+          echo
+                "Single language: ${{ steps.single_lang.outputs.progress }}"
+                "Multiple languages: ${{ steps.multi_lang.outputs.progress }}"
+                "Multiple languages ignoring one: ${{ steps.multi_lang_ignore.outputs.progress }}"
+                "Entire project: ${{ steps.full_project.outputs.progress }}"
+                "Entire project ignoring one: ${{ steps.full_project_ignore.outputs.progress }}"
+
+
+
+
+
