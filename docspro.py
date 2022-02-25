@@ -1,5 +1,6 @@
 import glob, os, polib
 
+
 def parser(list):
     """
     Convert comma separated items
