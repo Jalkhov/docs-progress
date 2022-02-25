@@ -1,3 +1,5 @@
+[![Test multiple cases](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml) [![Basic usage example](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml)
+
 # Docspro
 
 Calculate the translation percentage of your project, whether it is a single language or several languages. You will be able to get both the percentage of each language separately and the progress of the project in general, you will also have the opportunity to omit the languages you want from the final progress.
