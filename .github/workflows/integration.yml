@@ -11,10 +11,8 @@ jobs:
         id: docspro
         uses: Jalkhov/docs-pro@master
         with:
-          path: "docs/locales/es/LC_MESSAGES"
+          path: "docs/locales"
           multilang: true
-          only-languages: "es"
-          ignore-languages: "zh_CN"
 
       - name: Check outputs
         run: |

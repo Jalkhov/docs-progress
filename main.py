@@ -5,9 +5,10 @@ from docspro import DocsPro
 
 def main():
     docs_path = os.environ["INPUT_PATH"]
-    print(os.environ)
+    multilang = os.environ["INPUT_MULTILANG"]
+    ignore_langs = os.environ["INPUT_IGNORE-LANGUAGES"]
 
-    docsp = DocsPro(docs_path)
+    docsp = DocsPro(docs_path, multilang=multilang, ignore_langs=ignore_langs)
     translated = docsp.translated()
     """
     if docsp.warnings:
