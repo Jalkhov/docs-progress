@@ -107,9 +107,9 @@ class DocsPro(object):
 """
 def main():
     path = 'docs/locales'
-    dp = DocsPro(path)
+    dp = DocsPro(path, ignore_langs='zh_CN')
     d = dp.translated()
-    pprint(d)
+    print(d)
 
 if __name__ == '__main__':
     main()
