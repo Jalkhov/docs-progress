@@ -1,4 +1,4 @@
-[![Test multiple cases](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml) [![Basic usage example](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml)
+[![Test multiple cases](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml) [![Basic usage example](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml) [![Lint](https://github.com/Jalkhov/docs-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/lint.yml)
 
 # Docspro
 
