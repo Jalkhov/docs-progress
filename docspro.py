@@ -1,4 +1,5 @@
-import glob, os, polib
+import os
+import polib
 
 
 def parser(list):
@@ -10,6 +11,7 @@ def parser(list):
     out = [x.strip() for x in split]
 
     return out
+
 
 def vbool(val):
     return True if val == 'true' else False
@@ -25,7 +27,6 @@ class DocsPro(object):
         # self.PoFiles = []
         # self.warnings = []
 
-
     def __get_PoFiles(self, dir):
         """
         Get all .po files and absolute paths
@@ -39,20 +40,17 @@ class DocsPro(object):
 
         return pofiles
 
-
     def __msgs_data(self, po, obsoletes):
         """
         Get translated and total strings
         """
         translatedStrings = len(po.translated_entries())
-        totalStrings = len(po) - obsoletes # Substrate obsoletes from total entries
+        totalStrings = len(po) - obsoletes
 
         return (translatedStrings, totalStrings)
 
-
     def __list_langs(self):
         return os.listdir(self.path)
-
 
     def __remove_ignored_files(self, pofiles, ignored_langs):
         """
@@ -83,7 +81,6 @@ class DocsPro(object):
 
         return "%.2f" % (total)
 
-
     def translated(self):
         ignored_langs = self.ignore_langs
 
@@ -105,6 +102,8 @@ class DocsPro(object):
             pofiles = self.__remove_ignored_files(pofiles, ignored_langs)
             total = self.__total(pofiles)
             return total
+
+
 """
 def main():
     path = 'docs/locales'
