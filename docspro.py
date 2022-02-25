@@ -83,6 +83,7 @@ class DocsPro(object):
         ignored_langs = self.options['ignore_langs']
 
         if self.options['multilang']:
+            print("MULTILANG")
             target_langs = self.__list_langs()
             target_langs = [x for x in target_langs if x not in ignored_langs]
             langs_data = {}
@@ -99,7 +100,7 @@ class DocsPro(object):
             pofiles = self.__get_PoFiles(self.path)
             pofiles = self.__remove_ignored_files(pofiles, ignored_langs)
             total = self.__total(pofiles)
-
+            print(total)
             return total
 """
 def main():
