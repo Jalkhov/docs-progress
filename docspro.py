@@ -101,7 +101,7 @@ class DocsPro(object):
             total = self.__total(pofiles)
 
             return total
-
+"""
 def main():
     path = 'docs/locales'
     dp = DocsPro(path)
@@ -110,6 +110,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
+"""

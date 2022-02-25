@@ -7,6 +7,8 @@ def main():
     multilang = os.environ["INPUT_MULTILANG"]
     ignore_langs = os.environ["INPUT_IGNORE-LANGUAGES"]
 
+    print(multilang)
+
     docsp = DocsPro(docs_path, multilang=multilang, ignore_langs=ignore_langs)
     translated = docsp.translated()
     """
