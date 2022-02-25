@@ -14,8 +14,8 @@ class DocsPro(object):
     """docstring for DocsPro"""
     def __init__(self, path, multilang=False, ignore_langs=''):
         super(DocsPro, self).__init__()
-        self.options = {'multilang':multilang,
-                        'ignore_langs':parser(ignore_langs)}
+        self.multilang = multilang
+        self.ignore_langs = ignore_langs
         self.path = path
         # self.PoFiles = []
         # self.warnings = []
@@ -80,10 +80,9 @@ class DocsPro(object):
 
 
     def translated(self, fix=True):
-        ignored_langs = self.options['ignore_langs']
+        ignored_langs = self.ignore_langs
 
-        if self.options['multilang']:
-            print("MULTILANG")
+        if self.multilang:
             target_langs = self.__list_langs()
             target_langs = [x for x in target_langs if x not in ignored_langs]
             langs_data = {}
@@ -100,7 +99,6 @@ class DocsPro(object):
             pofiles = self.__get_PoFiles(self.path)
             pofiles = self.__remove_ignored_files(pofiles, ignored_langs)
             total = self.__total(pofiles)
-            print(total)
             return total
 """
 def main():

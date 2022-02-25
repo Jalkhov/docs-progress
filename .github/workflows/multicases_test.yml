@@ -50,11 +50,11 @@ jobs:
 
       - name: Check outputs
         run: |
-          echo "Single language: ${{ steps.single_lang.outputs.progress }}
-                Multiple languages: ${{ steps.multi_lang.outputs.progress }}
-                Multiple languages ignoring one: ${{ steps.multi_lang_ignore.outputs.progress }}
-                Entire project: ${{ steps.full_project.outputs.progress }}
-                Entire project ignoring one: ${{ steps.full_project_ignore.outputs.progress }}"
+              echo "Single language: ${{ steps.single_lang.outputs.progress }}
+              Multiple languages: ${{ steps.multi_lang.outputs.progress }}
+              Multiple languages ignoring one: ${{ steps.multi_lang_ignore.outputs.progress }}
+              Entire project: ${{ steps.full_project.outputs.progress }}
+              Entire project ignoring one: ${{ steps.full_project_ignore.outputs.progress }}"
 
 
 
