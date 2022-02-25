@@ -15,6 +15,7 @@ class DocsPro(object):
     def __init__(self, path, multilang=False, ignore_langs=''):
         super(DocsPro, self).__init__()
         self.multilang = multilang
+        print(self.multilang)
         self.ignore_langs = ignore_langs
         self.path = path
         # self.PoFiles = []
