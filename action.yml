@@ -9,10 +9,6 @@ inputs:
     description: "The project have multiple languages"
     required: false
     default: false
-  only-languages:
-    description: "Only check these languages, comma separated list"
-    required: false
-    default: ""
   ignore-languages:
     description: "Check all languages expect this one, comma separated list"
     required: false
