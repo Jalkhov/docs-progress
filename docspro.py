@@ -15,7 +15,6 @@ class DocsPro(object):
     def __init__(self, path, multilang=False, ignore_langs=''):
         super(DocsPro, self).__init__()
         self.multilang = multilang
-        print(self.multilang)
         self.ignore_langs = ignore_langs
         self.path = path
         # self.PoFiles = []
@@ -80,9 +79,9 @@ class DocsPro(object):
         return "%.2f" % (total)
 
 
-    def translated(self, fix=True):
+    def translated(self):
         ignored_langs = self.ignore_langs
-
+        print(self.multilang)
         if self.multilang:
             target_langs = self.__list_langs()
             target_langs = [x for x in target_langs if x not in ignored_langs]
