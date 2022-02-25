@@ -1,4 +1,4 @@
-name: Calculate es lang progress
+name: Basic usage example
 on: [push, pull_request]
 jobs:
   progress-check:
