@@ -1,9 +1,9 @@
 name: "Docspro"
 author: "Jalkhov"
-description: "Get translation pogress from docs"
+description: "Get translation progress from docs"
 inputs:
   path:
-    description: "Path to translation folder"
+    description: "Path to docs files"
     required: true
   multilang:
     description: "The project have multiple languages"
@@ -15,7 +15,7 @@ inputs:
     default: ""
 outputs:
   progress:
-    description: "Total progress from project"
+    description: "Progress from project"
 branding:
   icon: "percent"
   color: "red"

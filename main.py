@@ -1,5 +1,4 @@
-import os
-import requests
+import os, requests
 from docspro import DocsPro
 
 

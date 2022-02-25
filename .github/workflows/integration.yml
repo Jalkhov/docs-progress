@@ -1,7 +1,7 @@
 name: Integration Test
 on: [push]
 jobs:
-  build:
+  progress-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -12,7 +12,6 @@ jobs:
         uses: Jalkhov/docs-pro@master
         with:
           path: "docs/locales"
-          multilang: true
 
       - name: Check outputs
         run: |

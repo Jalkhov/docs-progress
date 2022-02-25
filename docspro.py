@@ -1,7 +1,4 @@
-import glob
-import os
-import polib
-from pprint import pprint
+import glob, os, polib
 
 def parser(list):
     """

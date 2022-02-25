@@ -1,5 +1,4 @@
 test_*.py
-dbss
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
