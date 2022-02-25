@@ -38,7 +38,6 @@ jobs:
         uses: Jalkhov/docs-pro@master
         with:
           path: "docs/locales"
-          ignore-languages: zh_CN
 
         # This calculate entire project progress (all langs)
         # ignoring one lang
