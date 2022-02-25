@@ -81,7 +81,7 @@ class DocsPro(object):
 
     def translated(self):
         ignored_langs = self.ignore_langs
-        print(self.multilang)
+        print(bool(self.multilang))
         if self.multilang:
             target_langs = self.__list_langs()
             target_langs = [x for x in target_langs if x not in ignored_langs]
