@@ -72,5 +72,5 @@ jobs:
 
       - name: Check outputs
             run: |
-            echo "Outputs - ${{ steps.myaction.outputs.myOutput }}"
+            echo "Outputs - ${{ steps.es_progress.outputs.progress }}"
 ```
