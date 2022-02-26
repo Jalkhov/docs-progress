@@ -3,11 +3,11 @@ from docsprogress import Docsprogress
 
 
 def main():
-    docs_path = os.environ["INPUT_PATH"]
+    path = os.environ["INPUT_PATH"]
     multilang = os.environ["INPUT_MULTILANG"]
     ignore_langs = os.environ["INPUT_IGNORE-LANGUAGES"]
 
-    docsp = DocsPro(docs_path, multilang=multilang, ignore_langs=ignore_langs)
+    docsp = Docsprogress(path, multilang=multilang, ignore_langs=ignore_langs)
     translated = docsp.translated()
     """
     if docsp.warnings:
