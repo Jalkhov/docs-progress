@@ -22,7 +22,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@v1.0.0
         with:
           path: "docs/locales/es"
 ```
@@ -68,7 +68,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@v1.0.0
         with:
           path: "docs/locales/es"
 
