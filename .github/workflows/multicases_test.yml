@@ -5,19 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@latest
 
         # This return a string with the progress of pointed lang
       - name: Single language
         id: single_lang
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales/es"
 
         # This return a dict with each lang and it progress
       - name: Multiple languages
         id: multi_lang
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales"
           multilang: true
@@ -26,7 +26,7 @@ jobs:
         # but ignoring zh_CN lang
       - name: Multiple languages ignoring one
         id: multi_lang_ignore
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales"
           multilang: true
@@ -35,7 +35,7 @@ jobs:
         # This calculate entire project progress (all langs)
       - name: Entire project
         id: full_project
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales"
 
@@ -43,7 +43,7 @@ jobs:
         # ignoring one lang
       - name: Entire project ignoring one
         id: full_project_ignore
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales"
           ignore-languages: "zh_CN"
