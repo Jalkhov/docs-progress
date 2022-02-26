@@ -1,6 +1,6 @@
-name: "Docspro"
+name: "Docs Progress"
 author: "Jalkhov"
-description: "Get translation progress from docs"
+description: "Calculate the translation percentage of your project"
 inputs:
   path:
     description: "Path to docs files"
