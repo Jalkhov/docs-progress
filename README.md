@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@latest
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales/es"
 ```
@@ -41,11 +41,7 @@ jobs:
 | ---------- | -------------------------------------------- |
 | `progress` | Return total progress of the given languages |
 
-## Examples
-
 ### Using the optional input
-
-This is how to use the optional inputs.
 
 ```yaml
 with:
@@ -64,11 +60,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@latest
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@master
+        uses: Jalkhov/docs-progress@latest
         with:
           path: "docs/locales/es"
 
@@ -77,5 +73,9 @@ jobs:
                   echo "Outputs - ${{ steps.es_progress.outputs.progress }}"
 ```
 
-### Want more examples?
+## Want more examples?
 Check [multiple cases workflow](.github/workflows/multicases_test.yml)
+
+## TODO
+- [ ] Generate/Deploy badges option
+- [ ] Show final checks
