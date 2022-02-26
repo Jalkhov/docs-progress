@@ -1,5 +1,5 @@
 name: Test multiple cases
-on: [push]
+on: [push, pull_request]
 jobs:
   progress-check:
     runs-on: ubuntu-latest
@@ -55,8 +55,3 @@ jobs:
               Multiple languages ignoring zh_CN: ${{ steps.multi_lang_ignore.outputs.progress }}
               Entire project: ${{ steps.full_project.outputs.progress }}%
               Entire project ignoring zh_CN: ${{ steps.full_project_ignore.outputs.progress }}%"
-
-
-
-
-
