@@ -3,6 +3,7 @@
 # Docspro
 
 Calculate the translation percentage of your project, whether it is a single language or several languages. You will be able to get both the percentage of each language separately and the progress of the project in general, you will also have the opportunity to omit the languages you want from the final progress.
+Inspired in [i18n coverage](https://github.com/alexkiro/i18n-coverage)
 
 ## Usage
 
