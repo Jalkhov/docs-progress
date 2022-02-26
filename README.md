@@ -1,9 +1,10 @@
 [![Test multiple cases](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/multicases_test.yml) [![Basic usage example](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/simple_example.yml) [![Lint](https://github.com/Jalkhov/docs-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/Jalkhov/docs-pro/actions/workflows/lint.yml)
 
-# Docspro
+# Docs Progress
 
 Calculate the translation percentage of your project, whether it is a single language or several languages. You will be able to get both the percentage of each language separately and the progress of the project in general, you will also have the opportunity to omit the languages you want from the final progress.
-Inspired in [i18n coverage](https://github.com/alexkiro/i18n-coverage)
+
+Inspired in [i18n coverage](https://github.com/alexkiro/i18n-coverage).
 
 ## Usage
 
@@ -21,7 +22,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-pro@master
+        uses: Jalkhov/docs-progress@master
         with:
           path: "docs/locales/es"
 ```
@@ -44,7 +45,7 @@ jobs:
 
 ### Using the optional input
 
-This is how to use the optional input.
+This is how to use the optional inputs.
 
 ```yaml
 with:
@@ -54,8 +55,6 @@ with:
 ```
 
 ### Using outputs
-
-Show people how to use your outputs in another action.
 
 ```yaml
 name: Calculate translation progress
@@ -69,7 +68,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-pro@master
+        uses: Jalkhov/docs-progress@master
         with:
           path: "docs/locales/es"
 
