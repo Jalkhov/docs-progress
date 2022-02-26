@@ -17,10 +17,10 @@ def vbool(val):
     return True if val == 'true' else False
 
 
-class DocsPro(object):
-    """docstring for DocsPro"""
+class Docsprogress(object):
+    """docstring for Docsprogress"""
     def __init__(self, path, multilang=False, ignore_langs=''):
-        super(DocsPro, self).__init__()
+        super(Docsprogress, self).__init__()
         self.multilang = vbool(multilang)
         self.ignore_langs = parser(ignore_langs)
         self.path = path
@@ -107,7 +107,7 @@ class DocsPro(object):
 """
 def main():
     path = 'docs/locales'
-    dp = DocsPro(path, ignore_langs='zh_CN')
+    dp = Docsprogress(path, ignore_langs='zh_CN')
     d = dp.translated()
     print(d)
 

@@ -9,7 +9,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-pro@master
+        uses: Jalkhov/docs-progress@master
         with:
           path: "docs/locales/es"
 

@@ -1,5 +1,5 @@
 import os
-from docspro import DocsPro
+from docsprogress import Docsprogress
 
 
 def main():
