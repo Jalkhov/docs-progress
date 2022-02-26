@@ -22,18 +22,18 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@v1.0.0
+        uses: Jalkhov/docs-progress@master
         with:
           path: "docs/locales/es"
 ```
 
 ### Inputs
 
-| Input                           | Description                                               | Type     |
-| ------------------------------- | --------------------------------------------------------- | -------- |
-| `path`                          | Path to the `.po` files                                   | `string` |
-| `multilang` _(optional)_        | The project have multiple languages                       | `bool`   |
-| `ignore-languages` _(optional)_ | Check all languages expect this one, comma separated list | `string` |
+| Input                           | Description                                                  | Type     |
+| ------------------------------- | ------------------------------------------------------------ | -------- |
+| `path`                          | Path to the `.po` files. The action will take ALL existing `.po` files in the given `path`. | `string` |
+| `multilang` _(optional)_        | The project have multiple languages. When `True` a dict is returned, ex: `{'es':'30.00', 'en':'12.00'}`. | `bool`   |
+| `ignore-languages` _(optional)_ | Check all languages expect this one, comma separated list.   | `string` |
 
 ### Outputs
 
@@ -68,7 +68,7 @@ jobs:
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@v1.0.0
+        uses: Jalkhov/docs-progress@master
         with:
           path: "docs/locales/es"
 
