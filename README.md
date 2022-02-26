@@ -76,3 +76,6 @@ jobs:
             run: |
                   echo "Outputs - ${{ steps.es_progress.outputs.progress }}"
 ```
+
+### Want more examples?
+Check [multiple cases workflow](.github/workflows/multicases_test.yml)
