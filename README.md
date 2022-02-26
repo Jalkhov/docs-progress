@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2.3.1
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@latest
+        uses: Jalkhov/docs-progress@v1.0.0
         with:
           path: "docs/locales/es"
 ```
@@ -60,11 +60,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2.3.1
 
       - name: Get Spanish translation progress
         id: es_progress
-        uses: Jalkhov/docs-progress@latest
+        uses: Jalkhov/docs-progress@v1.0.0
         with:
           path: "docs/locales/es"
 
